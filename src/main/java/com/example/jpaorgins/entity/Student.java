@@ -1,4 +1,4 @@
-package com.example.my_jpa.entity;
+package com.example.jpaorgins.entity;
 
 import javax.persistence.*;
 

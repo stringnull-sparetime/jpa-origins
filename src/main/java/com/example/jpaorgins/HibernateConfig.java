@@ -1,4 +1,4 @@
-package com.example.my_jpa;
+package com.example.jpaorgins;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

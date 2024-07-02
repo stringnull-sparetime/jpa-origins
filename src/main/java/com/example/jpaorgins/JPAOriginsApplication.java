@@ -1,6 +1,6 @@
-package com.example.my_jpa;
+package com.example.jpaorgins;
 
-import com.example.my_jpa.entity.Student;
+import com.example.jpaorgins.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.boot.SpringApplication;

@@ -12,6 +12,6 @@
         <property name="hibernate.hb2ddl.auto">update</property>
 
         <!--MAP-->
-        <mapping class="com.example.my_jpa.entity.Student"/>
+        <mapping class="com.example.jpaorgins.entity.Student"/>
     </session-factory>
 </hibernate-configuration>

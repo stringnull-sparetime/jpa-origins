@@ -1,10 +1,10 @@
-package com.example.my_jpa;
+package com.example.jpaorgins;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class XjpaApplicationTests {
+class JPAOriginsApplicationTests {
 
 	@Test
 	void contextLoads() {
