@@ -12,13 +12,17 @@ public class JPAOriginsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JPAOriginsApplication.class, args);
 		Session session = HibernateConfig.getSessionFactory().openSession();
-
-		Transaction transaction = session.beginTransaction();
-		Student s = new Student();
-		s.setName("Steve Mclaine");
-		s.setEmail("stevemclaine@gmail.com");
-		session.persist(s);
-		transaction.commit();
+		Student s = new com.example.jpaorgins.entity.StudentBuilder()
+			 .setName("Gene")
+			 .setEmail("gene@gmail.com")
+			 .build();
+		System.out.println(s.getEmail());
+//		Transaction transaction = session.beginTransaction();
+//		Student s = new Student();
+//		s.setName("Steve Mclaine");
+//		s.setEmail("stevemclaine@gmail.com");
+//		session.persist(s);
+//		transaction.commit();
 		session.close();
 	}
 
