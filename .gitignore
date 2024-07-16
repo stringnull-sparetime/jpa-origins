@@ -1,33 +1,87 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Ignore Maven target directory
+/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
+# Ignore build directories
+/.idea/
+/*.iml
+
+# Ignore log files and temp files
+*.log
+*.tmp
+*.temp
+
+# Ignore IntelliJ IDEA specific files
+/.idea/
+/*.iws
+/*.iml
+/*.ipr
+
+# Ignore Eclipse specific files
 .project
-.settings
-.springBeans
-.sts4-cache
+.classpath
+.settings/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Ignore compiled class files
+*.class
 
-### VS Code ###
+# Ignore Maven specific files
+dependency-reduced-pom.xml
+release.properties
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+
+# Ignore coverage reports
+/coverage/
+
+# Ignore output directories
+/out/
+
+# Ignore temporary files
+*.swp
+*~.nib
+*.bak
+*.orig
+*.rej
+*.sublime-workspace
+
+# Ignore logs
+/logs
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Ignore package files
+*.jar
+*.war
+*.ear
+
+# Ignore other unneeded files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore the local Maven repository
+.m2/repository/
+
+# Ignore IDE-specific files
 .vscode/
+
+# Ignore test results
+/test-output/
+
+# Ignore additional build files
+/build/
+
+# Ignore IDE settings
+.idea/
+*.iml
+*.iws
+*.ipr

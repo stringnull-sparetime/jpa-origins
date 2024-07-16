@@ -1,5 +1,7 @@
 package com.example.jpaorgins.entity;
 
+import org.stringnull.builder.BuilderProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -25,7 +27,7 @@ public class Student {
     public String getName() {
         return name;
     }
-
+    @BuilderProperty
     public void setName(String name) {
         this.name = name;
     }
@@ -33,7 +35,7 @@ public class Student {
     public String getEmail() {
         return email;
     }
-
+    @BuilderProperty
     public void setEmail(String email) {
         this.email = email;
     }
