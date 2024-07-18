@@ -19,7 +19,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @AutoService(Processor.class)
-@SupportedAnnotationTypes("org.stringnull.builder.BuilderProperty")
+@SupportedAnnotationTypes("org.stringnull.utils.builder.BuilderProperty")
 @SupportedSourceVersion(SourceVersion.RELEASE_17)
 public class BuilderPropertyProcessor extends AbstractProcessor {
     @Override
