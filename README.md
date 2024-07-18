@@ -5,10 +5,16 @@ This project is my Brother's challenge to me. Lets say that I am living at the a
 
 
 ###### Core
-<pre>
-JPAOriginsCRUDRepository&lt;T, ID>
-- use this class for standard operation 'findById' 'save' 'delete' 'update'
-</pre>
+
+    JPAOriginsCRUDRepository<T, ID>
+    - use this class for standard operation 'findById' 'save' 'delete' 'update'
+
+Example Usage
+
+    JPAOriginsFactory factory = new JPAOriginsFactory();
+    JPAOriginsCrudRepository<Student, Integer> studentRepository = factory.build(Student.class);
+    Student s = studentRepository.findById(1);
+
 
 ###### Processors 
 <pre>
