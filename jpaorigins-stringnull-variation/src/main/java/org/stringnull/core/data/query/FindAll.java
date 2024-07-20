@@ -9,21 +9,17 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
-public class FindByIdHandler<T> implements JPAOriginsCrudRepositoryInvocationHandler.MethodHandler {
+public class FindAll<T> implements JPAOriginsCrudRepositoryInvocationHandler.MethodHandler {
 
+    //add constructor that will handle the entity manager
     private final Class<T> entity;
-    public FindByIdHandler(Class<T> entity){
-       this.entity = entity;
+    public FindAll(Class<T> c){
+       entity = c;
     }
-
-
     @Override
     public Object invoke(Object[] args) {
-            try{
-                String query = "SELECT * FROM "
-                        +  entity.getAnnotation(JPAOriginsTable.class).name()
-                        + " WHERE id=" + args[0] + ";";
-
+           try{
+                String query = "SELECT * FROM " +  entity.getAnnotation(JPAOriginsTable.class).name() + ";";
                 ResultSet resultSet =
                     DatabaseManager
                         .getConnection()
@@ -50,7 +46,6 @@ public class FindByIdHandler<T> implements JPAOriginsCrudRepositoryInvocationHan
            }catch(SQLException sex) {
               sex.printStackTrace();
            }
-        //System.out.println("Select query for find by id");
         return null;
     }
 }

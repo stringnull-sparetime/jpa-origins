@@ -1,5 +1,6 @@
 package org.stringnull.core.data;
 
+import org.stringnull.core.data.query.FindAll;
 import org.stringnull.core.data.query.FindByIdHandler;
 import org.stringnull.core.data.query.SaveHandler;
 
@@ -13,13 +14,25 @@ public class JPAOriginsFactory {
 
         JPAOriginsCrudRepositoryInvocationHandler<T,ID> crpHandler = new JPAOriginsCrudRepositoryInvocationHandler<>();
 
-        Method methodFindById = Arrays.stream(JPAOriginsCrudRepository.class.getDeclaredMethods()).filter(method -> method.getName().equals("findById")).collect(Collectors.toSet()).stream().findFirst().get();
-        crpHandler.addMethodHandler(methodFindById, new FindByIdHandler());
+        Method methodFindAll =
+                Arrays.stream(JPAOriginsCrudRepository.class.getDeclaredMethods())
+                .filter(method -> method.getName().equals("findAll"))
+                .collect(Collectors.toSet())
+                .stream().findFirst().get();
+        crpHandler.addMethodHandler(methodFindAll, new FindAll<T>(entity));
+
+        Method methodFindById =
+                Arrays.stream(JPAOriginsCrudRepository.class.getDeclaredMethods())
+                .filter(method -> method.getName().equals("findById"))
+                .collect(Collectors.toSet())
+                .stream().findFirst().get();
+
+        crpHandler.addMethodHandler(methodFindById, new FindByIdHandler<T>(entity));
 
         Method methodSave = Arrays.stream(JPAOriginsCrudRepository.class.getDeclaredMethods()).filter(method -> method.getName().equals("save")).collect(Collectors.toSet()).stream().findFirst().get();
         crpHandler.addMethodHandler(methodSave, new SaveHandler());
 
-        return (JPAOriginsCrudRepository<T,ID>) Proxy.newProxyInstance(
+         return (JPAOriginsCrudRepository<T,ID>) Proxy.newProxyInstance(
                 entity.getClassLoader(),
                 new Class<?>[]{JPAOriginsCrudRepository.class},
                 crpHandler
