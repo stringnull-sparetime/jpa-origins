@@ -2,6 +2,7 @@ package org.stringnull.core.data;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +16,6 @@ public class JPAOriginsCrudRepositoryInvocationHandler<T,ID> implements Invocati
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-
         System.out.println("METHOD CALLED: " + method.getName());
         System.out.println("ARGUMENTS:" + Arrays.stream(method.getParameters()).findFirst().toString());
 
@@ -24,10 +24,10 @@ public class JPAOriginsCrudRepositoryInvocationHandler<T,ID> implements Invocati
             methodHandler.invoke(args);
         }
 
-        return null;//new Object();
+        return null;
     }
 
     public interface MethodHandler {
-       public Object invoke(Object args[]);
+       public Object invoke(Object args[]) throws SQLException;
     }
 }
