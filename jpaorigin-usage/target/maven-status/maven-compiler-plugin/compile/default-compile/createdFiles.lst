@@ -1,6 +1,5 @@
+com\example\jpaorigins\entity\Student.class
 com\example\jpaorigins\entity\TeacherBuilder.class
 com\example\jpaorigins\entity\StudentBuilder.class
-com\example\jpaorigins\JPAOriginsApplication.class
-com\example\jpaorigins\entity\Student.class
 com\example\jpaorigins\entity\Teacher.class
-com\example\jpaorigins\HibernateConfig.class
+com\example\jpaorigins\JPAOriginsApplication.class
