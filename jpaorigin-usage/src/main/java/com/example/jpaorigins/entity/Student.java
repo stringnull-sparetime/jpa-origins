@@ -1,20 +1,19 @@
 package com.example.jpaorigins.entity;
 
+import org.stringnull.core.data.query.annotations.JPAOriginsColumn;
 import org.stringnull.core.data.query.annotations.JPAOriginsEntity;
+import org.stringnull.core.data.query.annotations.JPAOriginsID;
 import org.stringnull.core.data.query.annotations.JPAOriginsTable;
 import org.stringnull.utils.builder.BuilderProperty;
-
-//import javax.persistence.*;
-
 
 @JPAOriginsEntity
 @JPAOriginsTable(name = "Students")
 public class Student {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-//    @Column(name = "id", nullable = false)
+    @JPAOriginsID
+    @JPAOriginsColumn(name = "id")
     private int id;
 
+    @JPAOriginsColumn()
     private String name;
 
     private String email;

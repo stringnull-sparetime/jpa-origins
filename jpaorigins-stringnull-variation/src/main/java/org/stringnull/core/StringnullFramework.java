@@ -11,7 +11,11 @@ import java.util.Properties;
 
 public class StringnullFramework {
     static Properties properties = new Properties();
+    static Class<?> application;
+
     public static void build(Class<?> c) {
+
+        application = c;
 
         try{
             InputStream banner  = StringnullFramework.class.getClassLoader().getResourceAsStream("stringnull.txt");
@@ -34,7 +38,6 @@ public class StringnullFramework {
         }catch(IOException e){
             e.printStackTrace();
         }
-
     }
 
     public static String getProperty(String key){
@@ -45,5 +48,9 @@ public class StringnullFramework {
     public static void log(String log){
         String prefix = ":::::: 🦖 ::::::   ";
         System.out.println(prefix + log);
+    }
+
+    public static Class<?> getApplication(){
+        return application;
     }
 }

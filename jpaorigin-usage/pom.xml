@@ -7,19 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>JPA-Origins</name>
 	<description>Edge of jpa history.</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>17</java.version>
 		<maven.compiler.source>18</maven.compiler.source>
@@ -30,23 +18,6 @@
 			<groupId>org.stringnull</groupId>
 			<artifactId>jpaorigins-stringnull-variation</artifactId>
 			<version>1.0-SNAPSHOT</version>
-		</dependency>
-
-		<!-- JAXB dependencies for JDK 11+ -->
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.3.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-			<version>2.3.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.xml.bind</groupId>
-			<artifactId>jaxb-core</artifactId>
-			<version>2.3.0.1</version>
 		</dependency>
 	</dependencies>
 

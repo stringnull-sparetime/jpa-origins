@@ -40,7 +40,39 @@ This project is my Brother's challenge to me. Lets say that I am living at the a
     :::::: 🦖 ::::::   Successfully connected!
 
 
-Repository
+###### Setting up Entity
+    //add this to the stringnull.properties
+    //this will drop and create schema
+    jpaorigins.schema=auto-create
+
+    //From your entity class e.g Student 
+    //add our annotation our framework will generate schema for us. 
+    
+    @JPAOriginsTable(name = "Students") //responsible for handling table properties
+    public class Student {
+        @JPAOriginsID //determining the primary key also added as SERIAL (for now)
+        @JPAOriginsColumn(name = "id") // dont forget to add this annotation which allow the framework to evaluate and generate valid table column and type.
+        private int id;
+
+        @JPAOriginsColumn()
+        private String name;
+    }
+
+    ---------------------------------------------------------------------------
+    OUTPUT
+    ---------------------------------------------------------------------------
+    🆂🆃🆁🅸🅽🅶🅽🆄🅻🅻 - 🅵🆁🅰🅼🅴🆆🅾🆁🅺
+    :::::: 🦖 ::::::   obtaining PostgreSQL configuration properties
+    :::::: 🦖 ::::::   database url jdbc:postgresql://localhost:5432/xjpa-test
+    :::::: 🦖 ::::::   startitng connection ....
+    :::::: 🦖 ::::::   database connection open
+    :::::: 🦖 ::::::   Successfully connected!
+    :::::: 🦖 ::::::   starting schema creator...
+    :::::: 🦖 ::::::   ✔️table dropped -> Students
+    :::::: 🦖 ::::::   ✔️created table -> CREATE TABLE Students( id SERIAL PRIMARY KEY, name VARCHAR);
+
+
+###### Using repository
 
     JPAOriginsCRUDRepository<T, ID>
     - use this class for standard operation 'findById' 'save' 'delete' 'update'
@@ -59,5 +91,5 @@ Utility that automatically created builder pattern to our entity.
 - this annotation generates a BuilderPattern for your entity.
 </pre>
 
-Protest? this is not a full-pledge framework. These demonstrate advance technique such as invocation handling, reflection, annotation processing and query generation.
+Protest? this is not a full-pledge framework. These demonstrate advance technique such as dynamic proxy, invocation handling, reflection, annotation processing and query generation.
 

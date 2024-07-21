@@ -8,6 +8,7 @@ org\stringnull\core\data\query\annotations\JPAOriginsEntity.class
 org\stringnull\core\data\query\FindByIdHandler.class
 org\stringnull\core\data\query\FindAll.class
 org\stringnull\core\data\JPAOriginsCrudRepository.class
+org\stringnull\core\database\DatabaseSchema.class
 org\stringnull\core\StringnullFramework.class
 org\stringnull\utils\builder\BuilderPropertyProcessor.class
 org\stringnull\core\data\JPAOriginsFactory.class

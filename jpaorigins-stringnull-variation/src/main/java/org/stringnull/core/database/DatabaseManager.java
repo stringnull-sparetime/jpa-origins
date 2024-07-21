@@ -1,7 +1,5 @@
 package org.stringnull.core.database;
-
 import org.stringnull.core.StringnullFramework;
-
 import java.sql.*;
 
 public class DatabaseManager {
@@ -11,8 +9,7 @@ public class DatabaseManager {
         try {
 
             StringnullFramework.log("database url " + StringnullFramework.getProperty("jpaorigins.url"));
-            StringnullFramework.log("starting connection ....");
-
+            StringnullFramework.log("startitng connection ....");
 
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(
@@ -20,9 +17,12 @@ public class DatabaseManager {
                 StringnullFramework.getProperty("jpaorigins.username"),
                 StringnullFramework.getProperty("jpaorigins.password")
             );
+
             StringnullFramework.log("database connection open");
             if(!connection.isClosed())
                 StringnullFramework.log("Successfully connected!");
+
+            new DatabaseSchema().buildSchema();
 
 
         }catch(SQLException sex) {
