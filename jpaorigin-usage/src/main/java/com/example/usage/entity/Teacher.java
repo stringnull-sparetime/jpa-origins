@@ -1,4 +1,4 @@
-package com.example.jpaorigins.entity;
+package com.example.usage.entity;
 
 
 import org.stringnull.core.data.query.annotations.JPAOriginsColumn;

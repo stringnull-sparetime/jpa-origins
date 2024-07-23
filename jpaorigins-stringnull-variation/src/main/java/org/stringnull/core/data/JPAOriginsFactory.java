@@ -29,8 +29,12 @@ public class JPAOriginsFactory {
 
         crpHandler.addMethodHandler(methodFindById, new FindByIdHandler<T>(entity));
 
-        Method methodSave = Arrays.stream(JPAOriginsCrudRepository.class.getDeclaredMethods()).filter(method -> method.getName().equals("save")).collect(Collectors.toSet()).stream().findFirst().get();
-        crpHandler.addMethodHandler(methodSave, new SaveHandler());
+        Method methodSave =
+                Arrays.stream(JPAOriginsCrudRepository.class.getDeclaredMethods())
+                .filter(method -> method.getName().equals("save"))
+                .collect(Collectors.toSet()).stream().findFirst().get();
+
+        crpHandler.addMethodHandler(methodSave, new SaveHandler<T>());
 
          return (JPAOriginsCrudRepository<T,ID>) Proxy.newProxyInstance(
                 entity.getClassLoader(),

@@ -42,6 +42,7 @@ public class StringnullFramework {
 
     public static String getProperty(String key){
         String property = properties.getProperty(key);
+        if(property == null) return "no-key";
         return property;
     }
 

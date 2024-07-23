@@ -6,8 +6,10 @@ D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stri
 D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\database\DatabaseSchema.java
 D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\data\query\annotations\JPAOriginsTable.java
 D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\utils\builder\BuilderPropertyProcessor.java
+D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\data\query\annotations\JPAOriginsID.java
 D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\data\query\annotations\JPAOriginsEntity.java
 D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\StringnullFramework.java
 D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\data\JPAOriginsFactory.java
+D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\data\query\annotations\JPAOriginsColumn.java
 D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\data\query\FindAll.java
 D:\Spare-time\jpa-origins\jpaorigins-stringnull-variation\src\main\java\org\stringnull\core\data\query\FindByIdHandler.java
