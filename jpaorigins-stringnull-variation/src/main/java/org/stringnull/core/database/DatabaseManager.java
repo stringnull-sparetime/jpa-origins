@@ -9,7 +9,7 @@ public class DatabaseManager {
         try {
 
             StringnullFramework.log("database url " + StringnullFramework.getProperty("jpaorigins.url"));
-            StringnullFramework.log("startitng connection ....");
+            StringnullFramework.log("starting connection ....");
 
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(

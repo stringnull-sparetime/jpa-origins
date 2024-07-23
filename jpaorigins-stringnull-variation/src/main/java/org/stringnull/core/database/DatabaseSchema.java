@@ -57,7 +57,6 @@ public class DatabaseSchema {
            StringnullFramework.log("✔️table dropped -> " + tblName);
        });
     }
-
     private void createTables(){
         tablesAnnotated.forEach(t -> {
             String tblName = t.getDeclaredAnnotation(JPAOriginsTable.class).name();
@@ -112,7 +111,6 @@ public class DatabaseSchema {
                return "UNDEFINED TYPE";
        }
     }
-
     private void executeUpdate(String query){
         try {
             //System.out.println(query);

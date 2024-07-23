@@ -1,4 +1,5 @@
 org\stringnull\core\data\query\SaveHandler.class
+org\stringnull\core\data\query\annotations\JPAOriginsID.class
 org\stringnull\utils\builder\BuilderProperty.class
 org\stringnull\core\data\JPAOriginsCrudRepositoryInvocationHandler$MethodHandler.class
 org\stringnull\core\data\query\annotations\JPAOriginsTable.class
@@ -9,6 +10,7 @@ org\stringnull\core\data\query\FindByIdHandler.class
 org\stringnull\core\data\query\FindAll.class
 org\stringnull\core\data\JPAOriginsCrudRepository.class
 org\stringnull\core\database\DatabaseSchema.class
+org\stringnull\core\data\query\annotations\JPAOriginsColumn.class
 org\stringnull\core\StringnullFramework.class
 org\stringnull\utils\builder\BuilderPropertyProcessor.class
 org\stringnull\core\data\JPAOriginsFactory.class

@@ -1,4 +1,4 @@
-package com.example.jpaorigins.entity;
+package com.example.usage.entity;
 
 import org.stringnull.core.data.query.annotations.JPAOriginsColumn;
 import org.stringnull.core.data.query.annotations.JPAOriginsEntity;
@@ -13,9 +13,10 @@ public class Student {
     @JPAOriginsColumn(name = "id")
     private int id;
 
-    @JPAOriginsColumn()
+    @JPAOriginsColumn
     private String name;
 
+    @JPAOriginsColumn
     private String email;
 
     public int getId() {
