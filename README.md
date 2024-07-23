@@ -1,6 +1,8 @@
 # 🦖 
 <b>jpaorigins-stringnull-variation</b>.
-This project is my Brother's challenge to me. Lets say that I am living at the age of dinosaur, around 200BC(Before Cornedbeef) where then I need to create my OWN persistence framework without the aid of <b>Spring Data JPA.</b>
+This project is my Brother's challenge to me. Lets say that I am living at the age of dinosaur, around 200BC(Before Cornedbeef) where then I need to create my OWN persistence framework without the aid of <b>Spring Data JPA.</b> You can normally compare this from an ORM framework Hibernate, SQLAlchemy, Active Record, Doctrine ORM ... and more.
+<p></p>
+Protest? <b>this is not a full-pledge framework.</b> These demonstrate advance technique such as dynamic proxy, invocation handling, reflection, annotation processing and query generation.
 
 
 
@@ -90,6 +92,4 @@ Utility that automatically created builder pattern to our entity.
 @BuilderProperty
 - this annotation generates a BuilderPattern for your entity.
 </pre>
-
-Protest? this is not a full-pledge framework. These demonstrate advance technique such as dynamic proxy, invocation handling, reflection, annotation processing and query generation.
 
